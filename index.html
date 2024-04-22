@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h2>Form of Harvy </h2>
+	<body>
+		<form id="myForm">
+		  <label for="name">Name:</label><br>
+		  <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+		  <label for="age">Age:</label><br>
+		  <input type="number" id="age" name="age" placeholder="Enter your age"><br><br>
+		  <input type="submit" value="Submit">
+		</form>
+		
+		<p class="thankyou">Thank you!</p>
+		
+		<script>
+		  const form = document.getElementById("myForm");
+		  const thankYou = document.getElementsByClassName("thankyou")[0];
+		  form.addEventListener("submit", function(event) {
+			event.preventDefault(); 
+			thankYou.style.display = "block";
+		  });
+		</script>
+<style>
+	
+  body {
+    font-family: consolas, monospace; 
+    background-color: #f8f8f8;  
+  }
+  form {
+    border: 2px solid #9a9a9a;  
+    padding: 15px;
+    border-radius: 5px;
+  }
+  label {
+    color: #000000; 
+  }
+  input[type="text"], input[type="number"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+  }
+  .thankyou {
+    color: #000;  
+    font-weight: bold;
+    margin-top: 10px;
+    display: none;
+  }
+</style>
+</head>
+</body>
+</html>
